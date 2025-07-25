@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafaela & Rafael | Nosso Casamento</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (para ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Adicionando as fontes personalizadas via Tailwind config */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['"Playfair Display"', 'serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    },
+                    colors: {
+                        'background-light': '#F9F8F6',
+                        'text-dark': '#4a4a4a',
+                        'accent': '#C5A880', 
+                        'present-btn': '#556B2F',
+                        'present-btn-hover': '#445425' 
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+    <!-- MENU DE NAVEGAÇÃO FIXO -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-40">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Nome do Casal -->
+                <a href="#home" class="font-playfair text-xl font-bold text-black">
+                    Rafaela & Rafael
+                </a>
+
+                <!-- Links do Menu (Desktop) -->
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li><a href="#historia" class="text-black hover:text-accent transition-colors">Nossa História</a></li>
+                    <li><a href="#o-grande-dia" class="text-black hover:text-accent transition-colors">Local</a></li>
+                    <li><a href="#trajes" class="text-black hover:text-accent transition-colors">Trajes</a></li>
+                    <li><a href="#dicas" class="text-black hover:text-accent transition-colors">Dicas</a></li>
+                    <li><a href="#lista-presentes" class="text-black hover:text-accent transition-colors">Presentes</a></li>
+                    <li><a href="#rsvp" class="bg-accent text-black hover:text-accent transition-colors">Confirmar Presença</a></li>
+                </ul>
+
+                <!-- Botão Hamburger (Mobile) -->
+                <button id="menu-btn" class="md:hidden text-2xl text-black">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <ul class="flex flex-col items-center py-4 space-y-4">
+                <li><a href="#historia" class="text-black hover:text-accent transition-colors mobile-link">Nossa História</a></li>
+                <li><a href="#o-grande-dia" class="text-black hover:text-accent transition-colors mobile-link">Local</a></li>
+                <li><a href="#trajes" class="text-black hover:text-accent transition-colors mobile-link">Trajes</a></li>
+                <li><a href="#dicas" class="text-black hover:text-accent transition-colors mobile-link">Dicas</a></li>
+                <li><a href="#lista-presentes" class="text-black hover:text-accent transition-colors mobile-link">Presentes</a></li>
+                <li><a href="#rsvp" class="bg-accent text-black hover:text-accent transition-colors mobile-link">Confirmar Presença</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<body class="bg-background-light font-poppins text-text-dark">
+
+    <!-- HERO SECTION -->
+    <header id="home" class="relative h-screen flex items-center justify-center text-white text-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="imagens/placeholder_casal.JPEG" 
+                 alt="Foto do casal Rafaela e Rafael" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+        </div>
+        <div class="relative z-10 p-4">
+            <h1 class="font-playfair text-5xl md:text-7xl lg:text-8xl" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Rafaela & Rafael
+            </h1>
+            <p class="mt-4 text-lg md:text-xl font-light" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                Vamos nos casar!
+            </p>
+            <p class="mt-2 text-lg md:text-xl font-light" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                28 de Fevereiro de 2026
+            </p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- CONTAGEM REGRESSIVA SECTION -->
+        <section id="countdown-section" class="py-16 bg-[#4682B4] text-center">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-2xl font-light text-white tracking-[0.2em] uppercase mb-8">
+                    Contagem Regressiva
+                </h2>
+                <div id="countdown" class="flex justify-center items-center gap-4 md:gap-8">
+                    <div class="bg-white text-black rounded-lg p-4 w-24 h-24 flex flex-col justify-center items-center shadow-lg">
+                        <span id="days" class="text-4xl font-bold">00</span>
+                        <span class="text-xs tracking-widest uppercase">Dias</span>
+                    </div>
+                    <div class="bg-white text-black rounded-lg p-4 w-24 h-24 flex flex-col justify-center items-center shadow-lg">
+                        <span id="hours" class="text-4xl font-bold">00</span>
+                        <span class="text-xs tracking-widest uppercase">Horas</span>
+                    </div>
+                    <div class="bg-white text-black rounded-lg p-4 w-24 h-24 flex flex-col justify-center items-center shadow-lg">
+                        <span id="minutes" class="text-4xl font-bold">00</span>
+                        <span class="text-xs tracking-widest uppercase">Minutos</span>
+                    </div>
+                    <div class="bg-white text-black rounded-lg p-4 w-24 h-24 flex flex-col justify-center items-center shadow-lg">
+                        <span id="seconds" class="text-4xl font-bold">00</span>
+                        <span class="text-xs tracking-widest uppercase">Segundos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOSSA HISTÓRIA SECTION -->
+        <section id="historia" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <div class="w-full md:w-1/2">
+                        <img src="imagens/placeholder.JPEG" 
+                             alt="Foto do casal em um momento descontraído"
+                             class="rounded-lg shadow-xl w-full h-auto object-cover aspect-square">
+                    </div>
+                    <div class="w-full md:w-1/2 text-center md:text-left">
+                        <h2 class="font-playfair text-4xl lg:text-5xl text-gray-800 mb-6">
+                            Nossa História
+                        </h2>
+                        <p class="text-base leading-relaxed mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p class="text-base leading-relaxed">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O GRANDE DIA SECTION -->
+        <section id="o-grande-dia" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="font-playfair text-4xl lg:text-5xl text-center text-gray-800 mb-16">
+                    O Grande Dia
+                </h2>
+                <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="font-playfair text-3xl text-gray-800 mb-6">Cerimônia e Recepção</h3>
+                        <div class="space-y-4 text-lg">
+                            <p class="flex items-start"><i class="fa-solid fa-calendar-days w-6 text-accent pt-1"></i> 28 de Fevereiro de 2026</p>
+                            <p class="flex items-start"><i class="fa-solid fa-clock w-6 text-accent pt-1"></i> Sábado, às 17h00</p>
+                            <p class="flex items-start"><i class="fa-solid fa-location-dot w-6 text-accent pt-1"></i> Estrada do Servidão Santa Terezinha, 14 - Sítio Stª. Terezinha Salto,SP</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/TzubaJhKLjNxPTXz7" target="_blank" class="inline-block mt-8 text-accent font-semibold hover:underline transition-colors duration-300">
+                            Ver no Google Maps
+                        </a>
+                    </div>
+                    <div class="w-full md:w-1/2 h-80 md:h-96 rounded-lg shadow-lg overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.0198106463975!2d-47.25962012337314!3d-23.209012799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf4e5ec4c9f585%3A0xec5042a3f9e8b6dc!2zRXN0YcOnw6NvIEJhcm9uZXphIC0gRXNwYcOnbyBkZSBFdmVudG9z!5e0!3m2!1spt-BR!2sbr!4v1721221993548!5m2!1spt-BR!2sbr"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div id="trajes" class="max-w-4xl mx-auto text-center mt-20">
+                    <h3 class="font-playfair text-3xl text-gray-800 mb-4">Trajes</h3>
+                    <p class="text-xl font-semibold mb-4">Esporte Fino</p>
+                    <p class="max-w-2xl mx-auto text-gray-600 mb-12">
+                        Branco é a cor da noiva, azul é a cor das madrinhas, então, para as mulheres sugerimos, deixar essas duas cores de fora das suas opções.
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-center items-start gap-8 md:gap-12">
+                        <div class="flex-1">
+                            <img src="imagens/trajes.JPG" alt="Exemplo de traje feminino esporte fino" class="rounded-lg shadow-lg mb-4 w-full h-auto object-cover">
+                            <h4 class="font-semibold text-lg">Sugestão Traje Feminino</h4>
+                        </div>
+                        <div class="flex-1">
+                            <img src="imagens/trajes.JPG" alt="Exemplo de traje masculino esporte fino" class="rounded-lg shadow-lg mb-4 w-full h-auto object-cover">
+                            <h4 class="font-semibold text-lg">Sugestão Traje Masculino</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DICAS SECTION -->
+        <section id="dicas" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="font-playfair text-4xl lg:text-5xl text-center text-gray-800 mb-16">
+                    Dicas para os Convidados
+                </h2>
+
+                <!-- Hotéis -->
+                <div class="mb-20">
+                    <h3 class="font-playfair text-3xl text-gray-800 mb-12 text-center">
+                        Onde se Hospedar
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
+                        <!-- Hotel 1 -->
+                        <div class="text-center">
+                            <img src="imagens/hotel.png" alt="Sugestão de Hotel" class="rounded-lg shadow-lg mb-4 w-full h-64 object-cover">
+                            <h4 class="font-semibold text-xl mb-1 text-gray-900">Hotel Placeholder 1</h4>
+                            <p class="text-gray-600">
+                                <i class="fa-solid fa-location-dot text-sm text-accent mr-1"></i>
+                                Endereço completo do Hotel 1, Cidade - SP
+                            </p>
+                        </div>
+                        <!-- Hotel 2 -->
+                        <div class="text-center">
+                            <img src="imagens/hotel.png" alt="Sugestão de Hotel" class="rounded-lg shadow-lg mb-4 w-full h-64 object-cover">
+                            <h4 class="font-semibold text-xl mb-1 text-gray-900">Hotel Placeholder 2</h4>
+                            <p class="text-gray-600">
+                                <i class="fa-solid fa-location-dot text-sm text-accent mr-1"></i>
+                                Endereço completo do Hotel 2, Cidade - SP
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maquiagem e Cabelo -->
+                <div>
+                    <h3 class="font-playfair text-3xl text-gray-800 mb-12 text-center">
+                        Salões e Profissionais
+                    </h3>
+                    <div class="flex flex-col md:flex-row items-center gap-12 max-w-4xl mx-auto bg-background-light p-8 rounded-lg shadow-md">
+                        <div class="w-full md:w-1/3">
+                            <img src="imagens/maquiagem.png" alt="Sugestão de profissional de beleza" class="rounded-lg shadow-lg w-full object-cover">
+                        </div>
+                        <div class="w-full md:w-2/3 text-center md:text-left">
+                            <h4 class="font-semibold text-2xl mb-2 text-gray-900">Nome do Profissional/Salão</h4>
+                            <p class="text-gray-600 mb-4">
+                                <i class="fa-solid fa-location-dot text-sm text-accent mr-1"></i>
+                                Endereço completo do salão, Cidade - SP
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Aqui você pode colocar uma breve descrição do serviço, informações de contato, ou um recado especial recomendando o profissional para suas convidadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+<!-- LISTA DE PRESENTES SECTION (CORRIGIDA) -->
+<section id="lista-presentes" class="py-20 md:py-32 bg-background-light">
+    <div class="container mx-auto px-6 lg:px-8">
+        <h2 class="font-playfair text-4xl lg:text-5xl text-center text-gray-800 mb-6 tracking-[0.2em]">
+            LISTA DE PRESENTES
+        </h2>
+        <p class="text-center max-w-xl mx-auto text-text-dark leading-relaxed mb-16">
+            Querido convidado!<br>
+            Caso queira nos agraciar com algum presente, gostaríamos que o mesmo fosse convertido em dinheiro,
+            pois o nosso cantinho já está mobiliado,
+            e esse valor seria muito útil para ajudar a iniciar nossa vida matrimonial.<br>
+            Caso queiram fazer um pix de qualquer outro valor:<br>
+            <span class="font-semibold">(11) 97300-0424</span>
+        </p>
+
+        <!-- AQUI ESTÁ A MUDANÇA: HTML estático em vez de JavaScript -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- Presente 1 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="mb-4">
+                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                </div>
+                <p class="text-gray-700 mb-2 flex-grow">Playstation 5</p>
+                <p class="text-2xl font-bold text-gray-900 mb-6">R$ 200,00</p>
+                <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                    Presentear
+                </button>
+            </div>
+            <!-- Presente 2 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="mb-4">
+                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                </div>
+                <p class="text-gray-700 mb-2 flex-grow">Playstation 5</p>
+                <p class="text-2xl font-bold text-gray-900 mb-6">R$ 200,00</p>
+                <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                    Presentear
+                </button>
+            </div>
+            <!-- Presente 3 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="mb-4">
+                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                </div>
+                <p class="text-gray-700 mb-2 flex-grow">Playstation 5</p>
+                <p class="text-2xl font-bold text-gray-900 mb-6">R$ 200,00</p>
+                <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                    Presentear
+                </button>
+            </div>
+            <!-- Presente 4 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="mb-4">
+                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                </div>
+                <p class="text-gray-700 mb-2 flex-grow">Playstation 5</p>
+                <p class="text-2xl font-bold text-gray-900 mb-6">R$ 200,00</p>
+                <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                    Presentear
+                </button>
+            </div>
+            <!-- Presente 5 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="mb-4">
+                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                </div>
+                <p class="text-gray-700 mb-2 flex-grow">Playstation 5</p>
+                <p class="text-2xl font-bold text-gray-900 mb-6">R$ 200,00</p>
+                <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                    Presentear
+                </button>
+            </div>
+            <!-- Presente 6 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="mb-4">
+                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                </div>
+                <p class="text-gray-700 mb-2 flex-grow">Playstation 5</p>
+                <p class="text-2xl font-bold text-gray-900 mb-6">R$ 200,00</p>
+                <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                    Presentear
+                </button>
+            </div>
+            <!-- Presente 7 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="mb-4">
+                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                </div>
+                <p class="text-gray-700 mb-2 flex-grow">Playstation 5</p>
+                <p class="text-2xl font-bold text-gray-900 mb-6">R$ 200,00</p>
+                <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                    Presentear
+                </button>
+            </div>
+            <!-- Presente 8 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="mb-4">
+                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                </div>
+                <p class="text-gray-700 mb-2 flex-grow">Playstation 5</p>
+                <p class="text-2xl font-bold text-gray-900 mb-6">R$ 200,00</p>
+                <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                    Presentear
+                </button>
+            </div>
+            <!-- Presente 9 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="mb-4">
+                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                </div>
+                <p class="text-gray-700 mb-2 flex-grow">Playstation 5</p>
+                <p class="text-2xl font-bold text-gray-900 mb-6">R$ 200,00</p>
+                <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                    Presentear
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- CONFIRMAÇÃO DE PRESENÇA (RSVP) SECTION -->
+        <section id="rsvp" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="font-playfair text-4xl lg:text-5xl text-center text-gray-800 mb-16">
+                    Confirme sua Presença
+                </h2>
+
+                <form id="rsvp-form" name="confirmacao-presenca" netlify class="max-w-2xl mx-auto space-y-6">
+                    <!-- Campo oculto para Netlify -->
+                    <input type="hidden" name="form-name" value="confirmacao-presenca" />
+
+                    <div>
+                        <label for="fullName" class="block text-sm font-semibold text-gray-700 mb-1">Nome Completo</label>
+                        <input type="text" name="nome-completo" id="fullName" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-accent focus:border-accent">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Você irá ao evento?</label>
+                        <div class="flex items-center gap-x-6">
+                            <label class="flex items-center gap-x-2"><input type="radio" name="ira-ao-evento" value="Sim" required class="text-accent focus:ring-accent"> Sim</label>
+                            <label class="flex items-center gap-x-2"><input type="radio" name="ira-ao-evento" value="Nao" class="text-accent focus:ring-accent"> Não</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="guestCount" class="block text-sm font-semibold text-gray-700 mb-1">Total de pessoas (contando com você)</label>
+                        <select name="quantidade-convidados" id="guestCount" class="w-full px-4 py-2 border border-gray-300 rounded-md bg-white focus:ring-accent focus:border-accent">
+                            <option value="1">Apenas eu</option>
+                            <option value="2">2 pessoas</option>
+                            <option value="3">3 pessoas</option>
+                        </select>
+                    </div>
+
+                    <!-- Container para os campos dinâmicos dos acompanhantes -->
+                    <div id="companion-fields-container" class="hidden space-y-4">
+                        <p class="text-sm font-semibold text-gray-700 -mb-2">Nome do(s) acompanhante(s):</p>
+                        <div id="companion-1-wrapper" class="hidden">
+                            <label for="companion1" class="block text-xs text-gray-600 mb-1">Acompanhante 1</label>
+                            <input type="text" name="nome-acompanhante-1" id="companion1" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-accent focus:border-accent">
+                        </div>
+                        <div id="companion-2-wrapper" class="hidden">
+                            <label for="companion2" class="block text-xs text-gray-600 mb-1">Acompanhante 2</label>
+                            <input type="text" name="nome-acompanhante-2" id="companion2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-accent focus:border-accent">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-sm font-semibold text-gray-700 mb-1">Telefone (com DDD)</label>
+                        <input type="tel" name="telefone" id="phone" placeholder="(11) 99999-9999" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-accent focus:border-accent">
+                    </div>
+                    
+                    <div>
+                        <label for="observations" class="block text-sm font-semibold text-gray-700 mb-1">Observações (opcional)</label>
+                        <textarea name="observacoes" id="observations" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-accent focus:border-accent"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="w-full bg-present-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                            Enviar Confirmação
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    <!-- MESSAGE MODAL (para Netlify Forms) -->
+    <div id="message-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <!-- O formulário precisa ter o atributo 'netlify' ou 'data-netlify="true"' -->
+        <form id="message-form" name="mensagens-presentes" netlify class="bg-white p-8 rounded-lg shadow-xl relative max-w-sm w-full">
+            <!-- Este campo oculto é ESSENCIAL para o Netlify identificar o formulário -->
+            <input type="hidden" name="form-name" value="mensagens-presentes" />
+
+            <!-- Botão de Fechar -->
+            <button type="button" id="close-message-modal-btn" class="absolute top-2 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold">×</button>
+            
+            <h3 class="font-playfair text-2xl mb-4 text-center">Deixe um recado</h3>
+            <p class="text-sm text-gray-600 mb-6 text-center">Sua mensagem nos deixará muito felizes!</p>
+            
+            <div class="mb-4">
+                <label for="guest-name" class="block text-sm font-medium text-gray-700">Seu nome completo</label>
+                <!-- O atributo 'name' é como o Netlify nomeia a coluna de dados -->
+                <input type="text" id="guest-name" name="nome-convidado" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent">
+            </div>
+
+            <div class="mb-6">
+                <label for="guest-message" class="block text-sm font-medium text-gray-700">Recado para os noivos</label>
+                <textarea id="guest-message" name="recado-noivos" rows="4" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-present-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                Continuar para o PIX
+            </button>
+        </form>
+    </div>    
+    <!-- PIX MODAL (POP-UP) - ATUALIZADO COM BOTÃO 'CONCLUIR' -->
+    <div id="pix-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-lg shadow-xl relative max-w-sm w-full text-center">
+            <!-- Botão de Fechar -->
+            <button id="close-pix-modal-btn" class="absolute top-2 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold">×</button>
+            
+            <h3 class="font-playfair text-2xl mb-4">PIX para Presente</h3>
+            <p class="text-sm text-gray-600 mb-4">Escaneie o QR Code abaixo com o aplicativo do seu banco para presentear!</p>
+
+            <!-- Imagem do QR Code -->
+            <img src="imagens/qrcode-pix.png" alt="QR Code PIX" class="mx-auto w-full max-w-[250px] rounded-md border">
+            
+            <p class="text-sm text-gray-600 mt-4">Ou use a chave:<br><span class="font-semibold text-text-dark">(11) 97300-0424</span></p>
+
+            <!-- BOTÃO ADICIONADO -->
+            <button id="complete-pix-btn" class="mt-6 w-full bg-present-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                Concluir
+            </button>
+        </div>
+    </div>
+
+    <!-- THANK YOU MODAL (POP-UP) -->
+    <div id="thank-you-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-lg shadow-xl relative max-w-sm w-full text-center">
+            <!-- Ícone de Coração -->
+            <div class="text-red-500 text-5xl mb-4"> 
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            
+            <h3 class="font-playfair text-2xl mb-4">Muito Obrigado!</h3>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                Sua presença (e seu presente!) significa o mundo para nós. ❤️<br>Estamos imensamente felizes por ter você ao nosso lado neste momento tão especial. Mal podemos esperar para celebrar juntos!
+            </p>
+
+            <button id="final-close-btn" class="w-full bg-present-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Contagem Regressiva ---
+        const countdownDate = new Date("2026-02-28T17:00:00").getTime();
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            if(document.getElementById("days")) {
+                document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+                document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+                document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+                document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            }
+            if (distance < 0) {
+                clearInterval(x);
+                if(document.getElementById("countdown-section")) {
+                    document.getElementById("countdown-section").innerHTML = `
+                        <div class="container mx-auto px-6 lg:px-8">
+                            <h2 class="text-3xl font-playfair text-white">O GRANDE DIA CHEGOU!</h2>
+                        </div>
+                    `;
+                }
+            }
+        }, 1000);
+
+        // --- Lógica dos Modais (Mensagem -> PIX -> Agradecimento) ---
+        const messageModal = document.getElementById('message-modal');
+        const pixModal = document.getElementById('pix-modal');
+        const thankYouModal = document.getElementById('thank-you-modal'); // Novo modal
+        const messageForm = document.getElementById('message-form');
+
+        // Botões
+        const closeMessageModalBtn = document.getElementById('close-message-modal-btn');
+        const closePixModalBtn = document.getElementById('close-pix-modal-btn');
+        const completePixBtn = document.getElementById('complete-pix-btn'); // Novo botão
+        const finalCloseBtn = document.getElementById('final-close-btn'); // Novo botão
+        const presentearBtns = document.querySelectorAll('.presentear-btn');
+
+        // Funções para abrir/fechar modais
+        const openMessageModal = () => messageModal.classList.remove('hidden');
+        const closeMessageModal = () => messageModal.classList.add('hidden');
+        const openPixModal = () => pixModal.classList.remove('hidden');
+        const closePixModal = () => pixModal.classList.add('hidden');
+        const openThankYouModal = () => thankYouModal.classList.remove('hidden'); // Nova função
+        const closeThankYouModal = () => thankYouModal.classList.add('hidden'); // Nova função
+
+        // Abrir o PRIMEIRO modal (mensagem) ao clicar em "Presentear"
+        presentearBtns.forEach(btn => {
+            btn.addEventListener('click', openMessageModal);
+        });
+
+        // Lidar com o envio do formulário para o Netlify
+        messageForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = new FormData(messageForm);
+            const submitButton = messageForm.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .catch((error) => console.warn('Erro ao submeter o formulário (esperado em ambiente local):', error))
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Continuar para o PIX';
+                closeMessageModal();
+                openPixModal();
+                messageForm.reset();
+            });
+        });
+        
+        // NOVO: Ao clicar em "Concluir" no modal do PIX, abre o de agradecimento
+        completePixBtn.addEventListener('click', () => {
+            closePixModal();
+            openThankYouModal();
+        });
+
+        // Eventos para fechar os modais
+        closeMessageModalBtn.addEventListener('click', (e) => { e.preventDefault(); closeMessageModal(); });
+        closePixModalBtn.addEventListener('click', closePixModal);
+        finalCloseBtn.addEventListener('click', closeThankYouModal); // NOVO
+
+        messageModal.addEventListener('click', (event) => { if (event.target === messageModal) closeMessageModal(); });
+        pixModal.addEventListener('click', (event) => { if (event.target === pixModal) closePixModal(); });
+        thankYouModal.addEventListener('click', (event) => { if (event.target === thankYouModal) closeThankYouModal(); }); // NOVO
+
+                // --- Lógica do Formulário de RSVP ---
+        const rsvpForm = document.getElementById('rsvp-form');
+        const guestCountSelect = document.getElementById('guestCount');
+        const companionFieldsContainer = document.getElementById('companion-fields-container');
+        const companion1Wrapper = document.getElementById('companion-1-wrapper');
+        const companion2Wrapper = document.getElementById('companion-2-wrapper');
+
+        // Mostra/esconde os campos de acompanhantes baseado na seleção
+        guestCountSelect.addEventListener('change', (e) => {
+            const count = parseInt(e.target.value, 10);
+            
+            if (count > 1) {
+                companionFieldsContainer.classList.remove('hidden');
+                companion1Wrapper.classList.remove('hidden');
+                document.getElementById('companion1').required = true;
+            } else {
+                companion1Wrapper.classList.add('hidden');
+                document.getElementById('companion1').required = false;
+            }
+
+            if (count > 2) {
+                companion2Wrapper.classList.remove('hidden');
+                document.getElementById('companion2').required = true;
+            } else {
+                companion2Wrapper.classList.add('hidden');
+                document.getElementById('companion2').required = false;
+            }
+            
+            if (count === 1) {
+                companionFieldsContainer.classList.add('hidden');
+            }
+        });
+
+        // Lidar com o envio do formulário RSVP para o Netlify
+        rsvpForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const submitButton = rsvpForm.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+
+            const formData = new FormData(rsvpForm);
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                console.log('Formulário RSVP enviado com sucesso!');
+                alert('Sua presença foi confirmada com sucesso! Muito obrigado!');
+                rsvpForm.reset();
+                // Esconde os campos de acompanhantes novamente
+                companionFieldsContainer.classList.add('hidden');
+            })
+            .catch((error) => {
+                console.error('Erro ao enviar o formulário RSVP:', error);
+                alert('Ocorreu um erro ao enviar sua confirmação. Por favor, tente novamente.');
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Enviar Confirmação';
+            });
+        });
+
+        // --- Lógica do Menu de Navegação ---
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Abre/fecha o menu mobile ao clicar no botão hamburger
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fecha o menu mobile ao clicar em um dos links
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
