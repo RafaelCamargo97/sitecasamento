@@ -16,26 +16,7 @@
     <!-- Font Awesome (para ícones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        /* Adicionando as fontes personalizadas via Tailwind config */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'playfair': ['"Playfair Display"', 'serif'],
-                        'poppins': ['"Poppins"', 'sans-serif'],
-                    },
-                    colors: {
-                        'background-light': '#F9F8F6',
-                        'text-dark': '#4a4a4a',
-                        'accent': '#C5A880', 
-                        'present-btn': '#556B2F',
-                        'present-btn-hover': '#445425' 
-                    }
-                }
-            }
-        }
-    </style>
+
 </head>
 
     <!-- MENU DE NAVEGAÇÃO FIXO -->
@@ -80,16 +61,16 @@
 <body class="bg-background-light font-poppins text-text-dark">
 
     <!-- HERO SECTION -->
-    <header id="home" class="relative h-screen flex items-center justify-center text-white text-center overflow-hidden">
+    <header id="home" class="relative h-screen flex items-top justify-center text-white text-center overflow-hidden">
         <div class="absolute inset-0">
-            <img src="imagens/placeholder_casal.JPEG" 
+            <img src="imagens/outros/placeholder_casal.JPEG" 
                  alt="Foto do casal Rafaela e Rafael" 
-                 class="w-full h-full object-cover">
+                 class="w-full h-full object-cover object-top">
             <div class="absolute inset-0 bg-black opacity-40"></div>
         </div>
         <div class="relative z-10 p-4">
             <h1 class="font-playfair text-5xl md:text-7xl lg:text-8xl" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                Rafaela & Rafael
+                <br><br>Rafaela & Rafael
             </h1>
             <p class="mt-4 text-lg md:text-xl font-light" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
                 Vamos nos casar!
@@ -135,7 +116,7 @@
             <div class="container mx-auto px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
                     <div class="w-full md:w-1/2">
-                        <img src="imagens/placeholder.JPEG" 
+                        <img src="imagens/outros/nossa_historia.png" 
                              alt="Foto do casal em um momento descontraído"
                              class="rounded-lg shadow-xl w-full h-auto object-cover aspect-square">
                     </div>
@@ -143,12 +124,26 @@
                         <h2 class="font-playfair text-4xl lg:text-5xl text-gray-800 mb-6">
                             Nossa História
                         </h2>
-                        <p class="text-base leading-relaxed mb-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <p class="text-base leading-relaxed">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                        <div class="text-base leading-relaxed space-y-4">
+                            <p>
+                                Já parou para pensar o tanto de coisas que tiveram que acontecer em nossas vidas para estarmos onde estamos hoje? Quantas pessoas tivemos que conhecer, nos afastar, perder. Quantas vezes tivemos que mudar nosso rumo ou a quantos lugares tivemos que ir.
+                            </p>
+                            <p>
+                                A nossa história começou em 26/02/2022, em um lugar que não era para estarmos e em uma festa que não gostamos até hoje.
+                                Sim, através de convites de amigos em comum, nossos caminhos se cruzaram e fomos parar em Ilhabela, em um carnaval, em uma festa de música eletrônica.
+                            </p>
+                            <p>
+                                Um amigo nosso em comum nos apresentou falando "esse nome não vai ser difícil de esquecer". E não foi mesmo!
+                            </p>
+                            <p>
+                                Depois daquela viagem, não nos desgrudamos mais. Alguns dias depois, já estávamos namorando, 9 meses mais tarde morando juntos, depois de 3 anos mudando de cidade e agora, quase 4 anos depois, vamos nos casar! E tudo no NOSSO tempo. 
+                            </p>
+                            <p>
+                                Agora estamos prontos para essa nova fase, para ter muitas histórias para contar e momentos para viver. 
+                                Nossa história parece que foi desenhada para ser dessa forma. Era para ser. Simples assim.
+                            </p>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -192,12 +187,12 @@
                     </p>
                     <div class="flex flex-col md:flex-row justify-center items-start gap-8 md:gap-12">
                         <div class="flex-1">
-                            <img src="imagens/trajes.JPG" alt="Exemplo de traje feminino esporte fino" class="rounded-lg shadow-lg mb-4 w-full h-auto object-cover">
-                            <h4 class="font-semibold text-lg">Sugestão Traje Feminino</h4>
+                            <img src="imagens/trajes/feminino.png" alt="Exemplo de traje feminino esporte fino" class="rounded-lg shadow-lg mb-4 w-full h-auto object-cover">
+                            <h4 class="font-semibold text-lg">Exemplo Traje Feminino</h4>
                         </div>
                         <div class="flex-1">
-                            <img src="imagens/trajes.JPG" alt="Exemplo de traje masculino esporte fino" class="rounded-lg shadow-lg mb-4 w-full h-auto object-cover">
-                            <h4 class="font-semibold text-lg">Sugestão Traje Masculino</h4>
+                            <img src="imagens/trajes/masculino.png" alt="Exemplo de traje masculino esporte fino" class="rounded-lg shadow-lg mb-4 w-full h-auto object-cover">
+                            <h4 class="font-semibold text-lg">Exemplo Traje Masculino</h4>
                         </div>
                     </div>
                 </div>
@@ -216,54 +211,88 @@
                     <h3 class="font-playfair text-3xl text-gray-800 mb-12 text-center">
                         Onde se Hospedar
                     </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
+                    <!-- Layout para 4 hotéis -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
                         <!-- Hotel 1 -->
-                        <div class="text-center">
-                            <img src="imagens/hotel.png" alt="Sugestão de Hotel" class="rounded-lg shadow-lg mb-4 w-full h-64 object-cover">
-                            <h4 class="font-semibold text-xl mb-1 text-gray-900">Hotel Placeholder 1</h4>
-                            <p class="text-gray-600">
-                                <i class="fa-solid fa-location-dot text-sm text-accent mr-1"></i>
-                                Endereço completo do Hotel 1, Cidade - SP
-                            </p>
+                        <div class="bg-background-light p-6 rounded-lg shadow-md text-center">
+                            <img src="imagens/hoteis/unihotel.png" alt="Hotel Unihotel Salto" class="rounded-lg shadow-lg mb-4 w-full h-56 object-cover">
+                            <h4 class="font-semibold text-xl mb-2 text-gray-900">Unihotel Salto</h4>
+                            <p class="text-gray-600 mb-2 flex items-start justify-center text-left"><i class="fa-solid fa-location-dot text-sm text-accent mr-2 mt-1"></i>Av. Getúlio Vargas, 444 - Vila Sao Francisco, Salto - SP</p>
+                            <p class="text-gray-600 mb-4 flex items-center justify-center"><i class="fa-solid fa-phone text-sm text-accent mr-2"></i>11 2840-4000</p>
+                            <p class="text-sm text-gray-700 bg-yellow-100 border-l-4 border-yellow-400 p-3 rounded-r-lg text-left"><i class="fa-solid fa-circle-info text-yellow-500 mr-2"></i><strong>Importante:</strong> Este é o hotel mais próximo e terá uma van para ir e voltar do casamento.</p>
                         </div>
                         <!-- Hotel 2 -->
-                        <div class="text-center">
-                            <img src="imagens/hotel.png" alt="Sugestão de Hotel" class="rounded-lg shadow-lg mb-4 w-full h-64 object-cover">
-                            <h4 class="font-semibold text-xl mb-1 text-gray-900">Hotel Placeholder 2</h4>
-                            <p class="text-gray-600">
-                                <i class="fa-solid fa-location-dot text-sm text-accent mr-1"></i>
-                                Endereço completo do Hotel 2, Cidade - SP
-                            </p>
+                        <div class="bg-background-light p-6 rounded-lg shadow-md text-center">
+                            <img src="imagens/hoteis/gandini.png" alt="Gandini Hotel" class="rounded-lg shadow-lg mb-4 w-full h-56 object-cover">
+                            <h4 class="font-semibold text-xl mb-2 text-gray-900">Gandini Hotel</h4>
+                            <p class="text-gray-600 mb-2 flex items-start justify-center text-left"><i class="fa-solid fa-location-dot text-sm text-accent mr-2 mt-1"></i>R. Argemiro da Silveira D'elboux, 120 - Alto da Vila Nova, Itu - SP</p>
+                            <p class="text-gray-600 flex items-center justify-center"><i class="fa-solid fa-phone text-sm text-accent mr-2"></i>11 4024-9700</p>
+                        </div>
+                        <!-- Hotel 3 -->
+                        <div class="bg-background-light p-6 rounded-lg shadow-md text-center">
+                            <img src="imagens/hoteis/kk.png" alt="Hotel KK" class="rounded-lg shadow-lg mb-4 w-full h-56 object-cover">
+                            <h4 class="font-semibold text-xl mb-2 text-gray-900">Hotel KK</h4>
+                            <p class="text-gray-600 mb-2 flex items-start justify-center text-left"><i class="fa-solid fa-location-dot text-sm text-accent mr-2 mt-1"></i>R. Pres. Kenedy, 48 - Centro, Itu - SP</p>
+                            <p class="text-gray-600 flex items-center justify-center"><i class="fa-solid fa-phone text-sm text-accent mr-2"></i>11 95881-0444</p>
+                        </div>
+                        <!-- Hotel 4 -->
+                        <div class="bg-background-light p-6 rounded-lg shadow-md text-center">
+                            <img src="imagens/hoteis/ibis.png" alt="Hotel Ibis Itu" class="rounded-lg shadow-lg mb-4 w-full h-56 object-cover object-top">
+                            <h4 class="font-semibold text-xl mb-2 text-gray-900">Ibis Itu</h4>
+                            <p class="text-gray-600 mb-2 flex items-start justify-center text-left"><i class="fa-solid fa-location-dot text-sm text-accent mr-2 mt-1"></i>Av Wolko Orni Yedlin 1251, Complexo Plaza Shopping, Itu - SP</p>
+                            <p class="text-gray-600 flex items-center justify-center"><i class="fa-solid fa-phone text-sm text-accent mr-2"></i>11 3414-3454</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Maquiagem e Cabelo -->
+                <!-- Dicas de maquiagem e penteado -->
                 <div>
                     <h3 class="font-playfair text-3xl text-gray-800 mb-12 text-center">
-                        Salões e Profissionais
+                        Maquiagem e Penteado
                     </h3>
-                    <div class="flex flex-col md:flex-row items-center gap-12 max-w-4xl mx-auto bg-background-light p-8 rounded-lg shadow-md">
-                        <div class="w-full md:w-1/3">
-                            <img src="imagens/maquiagem.png" alt="Sugestão de profissional de beleza" class="rounded-lg shadow-lg w-full object-cover">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto text-center">
+                        <!-- Coluna 1: Salões -->
+                        <div>
+                            <h4 class="font-semibold text-xl mb-4 text-gray-900">Salões de Beleza</h4>
+                            <div class="space-y-3">
+                                <a href="https://instagram.com/florencehairitu" target="_blank" class="inline-flex items-center text-gray-700 hover:text-accent transition-colors">
+                                    <i class="fa-brands fa-instagram text-lg mr-2"></i> @florencehairitu
+                                </a>
+                                <a href="https://instagram.com/spazziuscabeleireiro" target="_blank" class="inline-flex items-center text-gray-700 hover:text-accent transition-colors">
+                                    <i class="fa-brands fa-instagram text-lg mr-2"></i> @spazziuscabeleireiro
+                                </a>
+                            </div>
                         </div>
-                        <div class="w-full md:w-2/3 text-center md:text-left">
-                            <h4 class="font-semibold text-2xl mb-2 text-gray-900">Nome do Profissional/Salão</h4>
-                            <p class="text-gray-600 mb-4">
-                                <i class="fa-solid fa-location-dot text-sm text-accent mr-1"></i>
-                                Endereço completo do salão, Cidade - SP
-                            </p>
-                            <p class="text-gray-700 leading-relaxed">
-                                Aqui você pode colocar uma breve descrição do serviço, informações de contato, ou um recado especial recomendando o profissional para suas convidadas.
-                            </p>
+                        <!-- Coluna 2: Maquiagem -->
+                        <div>
+                            <h4 class="font-semibold text-xl mb-4 text-gray-900">Maquiagem</h4>
+                            <div class="space-y-3">
+                                <a href="https://instagram.com/julio_maquiador" target="_blank" class="inline-flex items-center text-gray-700 hover:text-accent transition-colors">
+                                    <i class="fa-brands fa-instagram text-lg mr-2"></i> @julio_maquiador
+                                </a>
+                                <a href="https://instagram.com/karoldobritzmakeup" target="_blank" class="inline-flex items-center text-gray-700 hover:text-accent transition-colors">
+                                    <i class="fa-brands fa-instagram text-lg mr-2"></i> @karoldobritzmakeup
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Coluna 3: Cabelo -->
+                        <div>
+                            <h4 class="font-semibold text-xl mb-4 text-gray-900">Cabelo</h4>
+                            <div class="space-y-3">
+                                <a href="https://instagram.com/camilalopeshairdresser" target="_blank" class="inline-flex items-center text-gray-700 hover:text-accent transition-colors">
+                                    <i class="fa-brands fa-instagram text-lg mr-2"></i> @camilalopeshairdresser
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Imagem -->
+                        <div class="md:col-span-3 mt-12">
+                            <img src="imagens/outros/maquiagem.png" alt="Inspiração de maquiagem e penteado" class="rounded-lg shadow-lg w-full max-w-2xl mx-auto object-cover">
                         </div>
                     </div>
                 </div>
-
-            </div>
         </section>
 
-<!-- LISTA DE PRESENTES SECTION (CORRIGIDA) -->
+<!-- LISTA DE PRESENTES SECTION -->
 <section id="lista-presentes" class="py-20 md:py-32 bg-background-light">
     <div class="container mx-auto px-6 lg:px-8">
         <h2 class="font-playfair text-4xl lg:text-5xl text-center text-gray-800 mb-6 tracking-[0.2em]">
@@ -283,7 +312,7 @@
             <!-- Presente 1 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente1.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Ingressos para uma Atração Turística</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 325,00</p>
@@ -294,7 +323,7 @@
             <!-- Presente 2 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente2.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente2.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Uma Diária no Hotel dos Sonhos</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 685,00</p>
@@ -305,7 +334,7 @@
             <!-- Presente 3 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente3.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente3.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Jantar Romântico à Luz de Velas</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 490,00</p>
@@ -316,9 +345,9 @@
             <!-- Presente 4 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente4.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
-                <p class="text-gray-700 mb-2 flex-grow">Patrocínio do energético da noiva</p>
+                <p class="text-gray-700 mb-2 flex-grow">Patrocínio velocity da noiva</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 210,00</p>
                 <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
                     Presentear
@@ -327,7 +356,7 @@
             <!-- Presente 5 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente5.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente5.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Um ano de academia para os noivos</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 1295,00</p>
@@ -338,7 +367,7 @@
             <!-- Presente 6 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente6.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente6.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Ajuda de custo para os noivos experimentarem todos os hambúrguers do hard rock</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 568,00</p>
@@ -349,7 +378,7 @@
             <!-- Presente 7 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente7.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente7.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Ajuda de custo para os noivos verem o hexa</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 3690,00</p>
@@ -360,7 +389,7 @@
             <!-- Presente 8 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente8.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente8.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Ajuda de custo para o noivo conhecer o irmão perdido - Keanu Reeves</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 850,00</p>
@@ -371,7 +400,7 @@
             <!-- Presente 9 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente9.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente9.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Blusa de frio para a noiva</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 280,00</p>
@@ -383,9 +412,9 @@
             <!-- Presente 10 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente10.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
-                <p class="text-gray-700 mb-2 flex-grow">Operação Pagar o Cartão Pós-Lua de Mel</p>
+                <p class="text-gray-700 mb-2 flex-grow">Operação pagar a fatura do cartão pós lua de mel</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 1950,00</p>
                 <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
                     Presentear
@@ -394,7 +423,7 @@
             <!-- Presente 11 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente11.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente11.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Maquiagem para a noiva</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 352,00</p>
@@ -405,7 +434,7 @@
             <!-- Presente 12 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente12.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Kit "Não se Queime no Sol"</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 240,00</p>
@@ -416,9 +445,9 @@
             <!-- Presente 13 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente13.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente13.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
-                <p class="text-gray-700 mb-2 flex-grow">Ingresso para a noiva conhecer o harry potter</p>
+                <p class="text-gray-700 mb-2 flex-grow">Ingresso para a noiva conhecer o Harry Potter</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 2375,00</p>
                 <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
                     Presentear
@@ -427,7 +456,7 @@
             <!-- Presente 14 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente14.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente14.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
                 <p class="text-gray-700 mb-2 flex-grow">Camiseta para o Rafael que não seja igual a 90% da população</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 375,00</p>
@@ -438,9 +467,9 @@
             <!-- Presente 15 -->
             <div class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center flex flex-col transition-transform duration-300 hover:scale-105">
                 <div class="mb-4">
-                    <img src="imagens/presente.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
+                    <img src="imagens/presentes/presente15.png" alt="Presente" class="rounded-md w-full h-48 object-cover">
                 </div>
-                <p class="text-gray-700 mb-2 flex-grow">Uma Sessão de Massagem Relaxante para os noivos</p>
+                <p class="text-gray-700 mb-2 flex-grow">Um dia no spa</p>
                 <p class="text-2xl font-bold text-gray-900 mb-6">R$ 440,00</p>
                 <button class="presentear-btn mt-auto bg-[#556B2F] text-white py-2 px-4 rounded-lg hover:bg-[#445425] transition-colors">
                     Presentear
